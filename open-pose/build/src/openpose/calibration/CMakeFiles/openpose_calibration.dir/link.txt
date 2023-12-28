@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fopenmp  -fopenmp -O3 -shared -Wl,-soname,libopenpose_calibration.so -o libopenpose_calibration.so CMakeFiles/openpose_calibration.dir/cameraParameterEstimation.cpp.o CMakeFiles/openpose_calibration.dir/gridPatternFunctions.cpp.o  -Wl,-rpath,/home/pc/Documents/openpose/build/src/openpose/core: ../core/libopenpose_core.so 
