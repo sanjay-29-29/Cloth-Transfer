@@ -3,7 +3,6 @@
 **\*\*\*\*\* New follow-up research by our team is available at https://github.com/rlawjdghek/StableVITON \*\*\*\*\***<br>
 
 
-![Teaser image](./assets/teaser.png)
 
 > **VITON-HD: High-Resolution Virtual Try-On via Misalignment-Aware Normalization**<br>
 > [Seunghwan Choi](https://github.com/shadow2496)\*<sup>1</sup>, [Sunghyun Park](https://psh01087.github.io)\*<sup>1</sup>, [Minsoo Lee](https://github.com/Minsoo2022)\*<sup>1</sup>, [Jaegul Choo](https://sites.google.com/site/jaegulchoo)<sup>1</sup><br>
@@ -19,45 +18,6 @@
 
 ECCV 2022 paper by our team (follow-up research): https://github.com/sangyun884/HR-VITON
 Preprocessing codes for person-agnostic representation are available at https://github.com/sangyun884/HR-VITON.
-
-## Installation
-
-Clone this repository:
-
-```
-git clone https://github.com/shadow2496/VITON-HD.git
-cd ./VITON-HD/
-```
-
-Install PyTorch and other dependencies:
-
-```
-conda create -y -n [ENV] python=3.8
-conda activate [ENV]
-conda install -y pytorch=[>=1.6.0] torchvision cudatoolkit=[>=9.2] -c pytorch
-pip install opencv-python torchgeometry
-```
-
-## Dataset
-
-We collected 1024 x 768 virtual try-on dataset for **our research purpose only**.
-You can download a preprocessed dataset from [VITON-HD DropBox](https://www.dropbox.com/s/10bfat0kg4si1bu/zalando-hd-resized.zip?dl=0).
-The frontal view woman and top clothing image pairs are split into a training and a test set with 11,647 and 2,032 pairs, respectively. 
-
-
-## Pre-trained networks
-
-We provide pre-trained networks and sample images from the test dataset. Please download `*.pkl` and test images from the [VITON-HD Google Drive folder](https://drive.google.com/drive/folders/0B8kXrnobEVh9fnJHX3lCZzEtd20yUVAtTk5HdWk2OVV0RGl6YXc0NWhMOTlvb1FKX3Z1OUk?resourcekey=0-OIXHrDwCX8ChjypUbJo4fQ&usp=sharing) and unzip `*.zip` files. `test.py` assumes that the downloaded files are placed in `./checkpoints/` and `./datasets/` directories.
-
-## Testing
-
-To generate virtual try-on images, run:
-
-```
-CUDA_VISIBLE_DEVICES=[GPU_ID] python test.py --name [NAME]
-```
-
-The results are saved in the `./results/` directory. You can change the location by specifying the `--save_dir` argument. To synthesize virtual try-on images with different pairs of a person and a clothing item, edit `./datasets/test_pairs.txt` and run the same command.
 
 ## License
 
